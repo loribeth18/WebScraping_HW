@@ -7,6 +7,7 @@ from splinter import Browser
 import os
 import pandas as pd
 
+#C:/Users/lorib/Downloads/chromedriver_win32/chromedriver.exe
 
 executable_path = {"executable_path": "./chromedriver"}
 browser = Browser("chrome", **executable_path, headless=False)
@@ -17,7 +18,7 @@ client = pymongo.MongoClient(conn)
 
 
 # Define database and collection
-db = client.nhl_db
+db = client.mars
 collection = db.items
 
 # URL of page to be scraped
