@@ -22,7 +22,6 @@ client = pymongo.MongoClient(conn)
 
 db = client.marsdb
 collection = db.items
-
 def scrape():
     browser=init_browser()
 
@@ -88,7 +87,7 @@ def scrape():
        "news_paragraph": news_p,
        "featured_image": fullURL,
        "weather_tweet": tweet_url,
-       "mars_facts": df.to_html('table.html'),
+       "mars_facts": html_table,
        "hemisphers": hemisphere_image_urls,
        "last_modified": dt.datetime.now()
     }
